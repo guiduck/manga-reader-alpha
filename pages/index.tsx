@@ -1,19 +1,13 @@
-import Head from 'next/head';
+import { Flex } from '@chakra-ui/react';
+
 import React from 'react';
+import Dashboard from '../components/Dashboard';
 
 const Home: React.FC = () => {
   return (
-    <div>
-      <Head>
-        <title>Home</title>
-      </Head>
-
-      <main >
-        <h1>
-          hello world
-        </h1>
-      </main>
-    </div>
+    <Flex>
+      <Dashboard />
+    </Flex>
   )
 }
 
