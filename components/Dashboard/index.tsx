@@ -12,11 +12,11 @@ const Dashboard: React.FC = () => {
         <meta name='keywords' content='' />
       </Head>
       <Box width='100%' rounded='lg'>
-        <Flex direction='column' justifyContent='center' alignItems='center'>
+        <Flex width='100vw' direction='column' justifyContent='center' alignItems='center'>
           <Heading m={10} textAlign='center'>
             Dashboard
           </Heading>
-          <Flex width='80%' >
+          <Flex width='100%' >
             <MangaList />
           </Flex>
         </Flex>

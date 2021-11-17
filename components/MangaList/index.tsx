@@ -1,4 +1,4 @@
-import { Flex } from '@chakra-ui/react';
+import { Flex, useColorModeValue } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import MangaCard from '../MangaCard';
 import axios from 'axios';
@@ -24,21 +24,7 @@ type Manga = {
 }
 
 const MangaList: React.FC = () => {
-  const [mangas, setMangas] = useState<Manga[]>([
-  //   {
-  //     chaptersUrl: '',
-  //     coverImage: '',
-  //     created_at: '',
-  //     genre: [''],
-  //     selfUrl: '',
-  //     seriesId: null,
-  //     seriesSlug: '',
-  //     seriesTitle: '',
-  //     sourceUrl: '',
-  //     synopsis: '',
-  //     updated_at: ''
-  // }
-]);
+  const [mangas, setMangas] = useState<Manga[]>([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -70,7 +56,8 @@ const MangaList: React.FC = () => {
   }, [])
 
   return (
-    <Flex wrap='wrap' >
+
+    <Flex wrap='wrap' justifyContent='center' alignItems='center' bg={useColorModeValue("#F9FAFB", "gray.600")}>
       {mangas ? mangas.map((manga) => {
         return (
           <MangaCard
